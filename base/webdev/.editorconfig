@@ -1,0 +1,36 @@
+#
+# EditorConfig for web projects.
+#
+# @author Reun Media <company@reun.eu>
+# @copyright 2020-2022 Reun Media
+#
+# @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.editorconfig
+#
+# @version 2.0.0
+#
+# @since 2022-12-18 Last modification date
+#
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.php]
+indent_size = 4
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 4 # Symfony uses 4 spaces
+trim_trailing_whitespace = false
+
+[composer.json]
+indent_size = 4

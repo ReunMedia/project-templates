@@ -1,0 +1,59 @@
+#
+# .gitignore for web projects.
+#
+# @author Reun Media <company@reun.eu>
+# @copyright 2020-2022 Reun Media
+#
+# @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.gitignore
+#
+# @version 2.0.0
+#
+# @since 2022-12-18 Last modification date
+#
+
+#########################
+# Files and directories #
+#########################
+# Development directories
+# Underscore prefix is used for temporary and local development directories
+/_*
+**/_*/**
+
+# Environment variables
+# Use `.env` for default values that are committed to Git and `.env.local` files
+# for overrides and sensitive data.
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs and temporary files
+*.log
+.tmp
+temp/
+
+#########
+# Tools #
+#########
+.phpunit.result.cache
+.yo-repository/
+
+###########
+# Editors #
+###########
+# VS Code
+# Copied from https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix

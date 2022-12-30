@@ -1,0 +1,40 @@
+{
+    "name": "reun/my-package",
+    "description": "",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Kimmo Salmela",
+            "email": "kimmo.salmela@reun.eu"
+        },
+        {
+            "name": "Reun Media",
+            "email": "company@reun.eu",
+            "homepage": "https://reun.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Reun\\MyPackage\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "codeception/specify": "^2.0",
+        "vimeo/psalm": "^5.4"
+    },
+    "suggest": {
+        "codeception/verify": "BDD assertions",
+        "monolog/monolog": "Logging library",
+        "symfony/cahce": "Cache",
+        "symfony/console": "For building CLI tools",
+        "vlucas/phpdotenv": "Load .env files"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

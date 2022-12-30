@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+  Reun Media Psalm configuration
+
+  @author Reun Media <company@reun.eu>
+
+  @copyright 2021-2022 Reun Media
+
+  @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/php/psalm.xml
+
+  @version 2.0.0
+  @since 2022-12-28 Last modification date
+-->
+
+<psalm errorLevel="1"
+  resolveFromConfigFile="true"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="https://getpsalm.org/schema/config"
+  xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd">
+  <projectFiles>
+    <directory name="src" />
+    <directory name="tests/phpunit" />
+    <ignoreFiles>
+      <directory name="vendor" />
+    </ignoreFiles>
+  </projectFiles>
+</psalm>

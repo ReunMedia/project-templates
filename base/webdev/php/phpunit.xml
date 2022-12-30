@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Reun Media PHPUnit configuration
+
+  Run `./vendor/bin/phpunit \-\-generate-configuration` to create a new file
+  with default configuration.
+
+  @author Reun Media <company@reun.eu>
+  @copyright 2020-2022 Reun Media
+
+  @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/php/phpunit.xml
+
+  @version 2.0.0
+
+  @since 2022-12-28 Last modification date
+-->
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+  bootstrap="vendor/autoload.php"
+  cacheResultFile="_phpunit/cache/test-results"
+  executionOrder="depends,defects"
+  forceCoversAnnotation="true"
+  beStrictAboutCoversAnnotation="true"
+  beStrictAboutOutputDuringTests="true"
+  beStrictAboutTodoAnnotatedTests="true"
+  convertDeprecationsToExceptions="true"
+  failOnRisky="true"
+  failOnWarning="true"
+  verbose="true">
+  <testsuites>
+    <testsuite name="default">
+      <directory>tests/phpunit</directory>
+    </testsuite>
+  </testsuites>
+  <coverage cacheDirectory="_phpunit/cache/coverage"
+    processUncoveredFiles="true"
+    pathCoverage="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <report>
+      <html outputDirectory="_phpunit/coverage-report-html"
+        lowUpperBound="30"
+        highLowerBound="70" />
+    </report>
+  </coverage>
+</phpunit>
