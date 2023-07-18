@@ -2,28 +2,30 @@
 # .gitignore for web projects.
 #
 # @author Reun Media <company@reun.eu>
-# @copyright 2020-2022 Reun Media
+# @copyright 2020-2023 Reun Media
 #
 # @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.gitignore
 #
-# @version 2.0.0
+# @version 3.0.0
 #
-# @since 2022-12-18 Last modification date
+# @since 2023-07-18 Last modification date
 #
 
 #########################
 # Files and directories #
 #########################
 # Development directories
-# Underscore prefix is used for temporary and local development directories
+# Underscore prefix is used for temporary, data and development directories,
+# such as `_build`, `_data` or `_project`.
 /_*
 **/_*/**
 
 # Environment variables
-# Use `.env` for default values that are committed to Git and `.env.local` files
-# for overrides and sensitive data.
-.env.local
-.env.*.local
+# Define default variables in `.env.example`. Developers should supply their own
+# environment variables (e.g. by copying the example file).
+.env
+.env.*
+!.env.example
 
 # Dependencies
 node_modules/
