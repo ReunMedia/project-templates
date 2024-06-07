@@ -6,9 +6,9 @@
 #
 # @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.gitignore
 #
-# @version 3.0.0
+# @version 3.1.0
 #
-# @since 2023-07-18 Last modification date
+# @since 2024-05-29 Last modification date
 #
 
 #########################
@@ -28,19 +28,24 @@
 !.env.example
 
 # Dependencies
-node_modules/
+node_modules
 vendor/
 
 # Logs and temporary files
+logs
 *.log
 .tmp
-temp/
+tmp
+temp
+
+# Build directories
+dist
 
 #########
 # Tools #
 #########
 .phpunit.result.cache
-.yo-repository/
+.yo-repository
 
 ###########
 # Editors #
@@ -64,3 +69,9 @@ temp/
 # OS #
 ######
 .DS_Store
+Thumbs.db
+
+###########
+# Project #
+###########
+# Add project specific ignores below.
