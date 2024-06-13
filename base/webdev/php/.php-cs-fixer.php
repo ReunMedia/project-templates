@@ -20,6 +20,7 @@ use PhpCsFixer\Config;
 $config = new Config();
 
 return $config
+    ->setRiskyAllowed(true)
     ->setRules([
         "@PER-CS2.0" => true,
         "@PhpCsFixer" => true,
