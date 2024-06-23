@@ -17,6 +17,10 @@ declare(strict_types=1);
 
 use PhpCsFixer\Config;
 
+/**
+ * @disregard P1009 because we're using VS Code extension that bundles PHP CS
+ * Fixer
+ */
 $config = new Config();
 
 return $config
