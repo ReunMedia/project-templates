@@ -1,18 +1,21 @@
 #
-# EditorConfig for web projects.
+# Reun Media EditorConfig
 #
 # @author Reun Media <company@reun.eu>
-# @copyright 2020-2022 Reun Media
+# @copyright 2020-2024 Reun Media
 #
 # @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.editorconfig
 #
-# @version 2.0.0
+# @version 2.1.0
 #
-# @since 2022-12-18 Last modification date
+# @since 2024-07-14 Last modification date
 #
 
 root = true
 
+###########
+# General #
+###########
 [*]
 charset = utf-8
 end_of_line = lf
@@ -24,13 +27,30 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.php]
-indent_size = 4
-
 [*.{yaml,yml}]
 indent_style = space
 indent_size = 4 # Symfony uses 4 spaces
 trim_trailing_whitespace = false
 
+#######
+# PHP #
+#######
+[*.php]
+indent_size = 4
+
 [composer.json]
 indent_size = 4
+
+#########
+# Godot #
+#########
+[*.gd]
+indent_style = tab
+indent_size = 4
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+###########
+# Project #
+###########
+# Add project specific configuration below.
