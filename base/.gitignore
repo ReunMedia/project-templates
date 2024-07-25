@@ -4,11 +4,11 @@
 # @author Reun Media <company@reun.eu>
 # @copyright 2020-2024 Reun Media
 #
-# @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.gitignore
+# @see https://github.com/Reun-Media/project-templates/blob/master/base/.gitignore
 #
-# @version 3.2.1
+# @version 3.3.0
 #
-# @since 2024-07-17 Last modification date
+# @since 2024-07-25 Last modification date
 #
 
 #########################
@@ -42,12 +42,6 @@ temp
 # Build directories
 dist
 
-#########
-# Tools #
-#########
-.yo-repository
-.godot/
-
 ###########
 # Editors #
 ###########
@@ -71,6 +65,21 @@ dist
 ######
 .DS_Store
 Thumbs.db
+
+#########
+# Tools #
+#########
+# You can remove tools not used in your project.
+
+# Godot
+.godot/
+
+# PHP
+# https://phpstan.org/config-reference#multiple-files
+phpstan.neon
+
+# Yeoman
+.yo-repository
 
 ###########
 # Project #
