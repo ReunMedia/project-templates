@@ -8,7 +8,7 @@
  *
  * @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/php/.php-cs-fixer.php
  *
- * @version 3.0.1
+ * @version 3.0.2
  *
  * @since 2024-06-23 Last modification date
  */
@@ -17,10 +17,6 @@ declare(strict_types=1);
 
 use PhpCsFixer\Config;
 
-/**
- * @disregard P1009 because we're using VS Code extension that bundles PHP CS
- * Fixer
- */
 $config = new Config();
 
 return $config
