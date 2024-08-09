@@ -13,7 +13,7 @@ your project.
 
 | Directory                                      | Content                                           |
 | ---------------------------------------------- | ------------------------------------------------- |
-| [.githuh/workflows](.github/workflows)         | Reusable GitHub Actions workflows                 |
+| [.github/workflows](.github/workflows)         | Reusable GitHub Actions workflows                 |
 | [base](./base)                                 | Common files for all projects                     |
 | [base/webdev](./base/webdev)                   | Common files for webdev projects                  |
 | [base/webdev/frontend](./base/webdev/frontend) | Webdev frontend configuration                     |
