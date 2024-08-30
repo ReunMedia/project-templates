@@ -6,9 +6,9 @@
 #
 # @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.editorconfig
 #
-# @version 2.2.0
+# @version 2.3.0
 #
-# @since 2024-08-28 Last modification date
+# @since 2024-08-30 Last modification date
 #
 
 root = true
@@ -38,6 +38,12 @@ indent_size = 4
 
 [composer.json]
 indent_size = 4
+
+#########
+# Caddy #
+#########
+[Caddyfile*]
+indent_style = tab
 
 #########
 # Godot #

@@ -14,37 +14,37 @@
 # www to non-www redirect
 # TODO - Replace `example.com` with your domain
 www.example.com {
-  redir https://example.com{uri} permanent
+	redir https://example.com{uri} permanent
 }
 
 :80 {
-  # https://caddyserver.com/docs/caddyfile/directives/header
-  header {
-    # Disable clients from sniffing the media type
-	  X-Content-Type-Options nosniff
+	# https://caddyserver.com/docs/caddyfile/directives/header
+	header {
+		# Disable clients from sniffing the media type
+		X-Content-Type-Options nosniff
 
-    # Remove `X-Powered-By` header set by PHP
-    # TODO - Also / instead set `expose_php = off` in `php.ini`
-    -X-Powered-By
+		# Remove `X-Powered-By` header set by PHP
+		# TODO - Also / instead set `expose_php = off` in `php.ini`
+		-X-Powered-By
 
-    # Remove `Server: Caddy` header set by Caddy
-    # There's no security benefit. Removing it just means less headers.
-    # https://caddy.community/t/remove-server-header-globally/15897/2
-    -Server
-  }
+		# Remove `Server: Caddy` header set by Caddy
+		# There's no security benefit. Removing it just means less headers.
+		# https://caddy.community/t/remove-server-header-globally/15897/2
+		-Server
+	}
 
-  # Cache headers
-  ## Favicons and other icons
-  header /*.png Cache-Control max-age=86400 # 1 day
-  header /*.svg Cache-Control max-age=86400 # 1 day
-  header /*.ico Cache-Control max-age=86400 # 1 day
-  header /site.webmanifest Cache-Control max-age=86400 # 1 day
-  ## Static content
-  header /static/* Cache-Control max-age=31536000 # 1 year
+	# Cache headers
+	## Favicons and other icons
+	header /*.png Cache-Control max-age=86400 # 1 day
+	header /*.svg Cache-Control max-age=86400 # 1 day
+	header /*.ico Cache-Control max-age=86400 # 1 day
+	header /site.webmanifest Cache-Control max-age=86400 # 1 day
+	## Static content
+	header /static/* Cache-Control max-age=31536000 # 1 year
 
-  root * /app/www
-  # Enable compression
-  encode zstd gzip
-  file_server
-  php_fastcgi php:9000
+	root * /app/www
+	# Enable compression
+	encode zstd gzip
+	file_server
+	php_fastcgi php:9000
 }
