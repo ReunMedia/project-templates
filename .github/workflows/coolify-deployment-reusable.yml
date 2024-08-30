@@ -14,51 +14,51 @@
 name: "Coolify Deployment"
 
 on:
-    workflow_call:
-        inputs:
-            coolify_url:
-                description: "Coolify URL. Must not end in a slash."
-                required: true
-                type: string
-            coolify_resource_id:
-                required: true
-                type: string
-        secrets:
-            coolify_api_token:
-                required: true
+  workflow_call:
+    inputs:
+      coolify_url:
+        description: "Coolify URL. Must not end in a slash."
+        required: true
+        type: string
+      coolify_resource_id:
+        required: true
+        type: string
+    secrets:
+      coolify_api_token:
+        required: true
 
 jobs:
-    coolify-deployment:
-        runs-on: ubuntu-latest
-        steps:
-            # Make sure supplied Coolify URL doesn't end in a slash. This
-            # is important, because having an extra slash breaks the API
-            # request.
-            - name: Validate variables
-              # https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-an-intermediate-environment-variable
-              env:
-                  COOLIFY_URL: ${{inputs.coolify_url}}
-              run: |
-                  echo "Validating that coolify_url doesn't end in '/'"
-                  echo "$COOLIFY_URL" | grep -P '[^/]$'
+  coolify-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      # Make sure supplied Coolify URL doesn't end in a slash. This
+      # is important, because having an extra slash breaks the API
+      # request.
+      - name: Validate variables
+        # https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-an-intermediate-environment-variable
+        env:
+          COOLIFY_URL: ${{inputs.coolify_url}}
+        run: |
+          echo "Validating that coolify_url doesn't end in '/'"
+          echo "$COOLIFY_URL" | grep -P '[^/]$'
 
-            # Update Coolify project's source commit SHA via API request. This
-            # is done to make sure Coolify deploys the exact commit that
-            # triggered this action.
-            - name: Update source commit SHA in Coolify
-              uses: fjogeleit/http-request-action@v1
-              with:
-                  url: ${{inputs.coolify_url}}/api/v1/applications/${{inputs.coolify_resource_id}}
-                  method: PATCH
-                  bearerToken: ${{secrets.coolify_api_token}}
-                  data: >-
-                      {
-                      "git_commit_sha": "${{github.sha}}"
-                      }
+      # Update Coolify project's source commit SHA via API request. This
+      # is done to make sure Coolify deploys the exact commit that
+      # triggered this action.
+      - name: Update source commit SHA in Coolify
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: ${{inputs.coolify_url}}/api/v1/applications/${{inputs.coolify_resource_id}}
+          method: PATCH
+          bearerToken: ${{secrets.coolify_api_token}}
+          data: >-
+            {
+            "git_commit_sha": "${{github.sha}}"
+            }
 
-            - name: Trigger Coolify deployment via webhook
-              uses: fjogeleit/http-request-action@v1
-              with:
-                  url: ${{inputs.coolify_url}}/api/v1/deploy?uuid=${{inputs.coolify_resource_id}}&force=false
-                  method: GET
-                  bearerToken: ${{secrets.coolify_api_token}}
+      - name: Trigger Coolify deployment via webhook
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: ${{inputs.coolify_url}}/api/v1/deploy?uuid=${{inputs.coolify_resource_id}}&force=false
+          method: GET
+          bearerToken: ${{secrets.coolify_api_token}}
