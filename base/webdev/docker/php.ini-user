@@ -1,0 +1,26 @@
+;
+; Additional production PHP ini configuration by Reun Media
+;
+; This file is meant to be appended to `php.ini-production`
+;
+; @author Reun Media <company@reun.eu>
+; @copyright 2024 Reun Media
+;
+; @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/docker/php.ini-user
+;
+; @version 1.0.0
+;
+; @since 2024-08-30 Last modification date
+;
+
+expose_php = Off
+
+; Register env variables to $_ENV
+;
+; There are conflicting recommendations on this. `php.ini` recommends not
+; registering env variables and using `getenv()` instead because of performance
+; penalty while Dotenv developers recommend using `$_ENV`, because `getenv()` is
+; not thread safe. We use `$_ENV`.
+;
+; See: https://github.com/vlucas/phpdotenv?tab=readme-ov-file#putenv-and-getenv
+variables_order = "EGPCS"
