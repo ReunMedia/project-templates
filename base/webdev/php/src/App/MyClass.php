@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Reun\MyPackage;
+namespace App;
 
 class MyClass
 {
