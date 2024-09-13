@@ -10,8 +10,6 @@
 #
 # @version 1.0.0
 #
-# @since 2024-08-30 Last modification date
-#
 
 # Run in /app directory
 cd /app || exit

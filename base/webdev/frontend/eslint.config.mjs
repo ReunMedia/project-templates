@@ -9,8 +9,6 @@
  * @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/php/.php-cs-fixer.php
  *
  * @version 1.0.0
- *
- * @since 2024-07-25 Last modification date
  */
 
 import eslint from "@eslint/js";
@@ -21,5 +19,5 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
-  eslintConfigPrettier,
+  eslintConfigPrettier
 );

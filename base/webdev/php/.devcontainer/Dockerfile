@@ -8,8 +8,6 @@
 #
 # @version 1.0.0
 #
-# @since 2024-07-25 Last modification date
-#
 
 FROM mcr.microsoft.com/devcontainers/php:1-8.3-bookworm
 

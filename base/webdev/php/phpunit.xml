@@ -10,8 +10,6 @@
   @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/php/phpunit.xml
 
   @version 3.0.0
-
-  @since 2024-07-25 Last modification date
 -->
 
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

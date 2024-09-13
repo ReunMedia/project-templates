@@ -7,8 +7,6 @@
  * @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/php/.devcontainer/devcontainer.json
  *
  * @version 1.0.0
- *
- * @since 2024-07-25 Last modification date
  */
 
 // https://containers.dev/implementors/json_reference/
