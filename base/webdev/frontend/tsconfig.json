@@ -1,0 +1,50 @@
+/**
+ * Typescript configuration for Vue / Vite.
+ *
+ * @author Kimmo Salmela <kimmo.salmela@reun.eu>
+ * @copyright 2021 Reun Media
+ *
+ * @see https://gitlab.com/reun/webdev/generator-reun-webapp
+ *
+ * @version 2.0.0
+ */
+
+// Most frontend tools (Vue, Vite, Nuxt etc.) come with a built-in TS
+// configuration that should be used instead of this file.
+
+// https://github.com/vitejs/vite/blob/main/packages/create-vite/template-vue-ts/tsconfig.json
+// https://github.com/vuejs/tsconfig
+// https://nuxt.com/docs/guide/directory-structure/tsconfig
+
+{
+  "compilerOptions": {
+    // Module resolution.
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    // Compilation and type checking.
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+
+    // Output options.
+    // By default, `noEmit` is true to only perform type checking. Transpilation
+    // is done by esbuild (Vite).
+    // Use `--noEmit false --emitDeclarationOnly` options to build types when
+    // working with npm packages.
+    "noEmit": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "./types",
+
+    // Paths and libs.
+    "baseUrl": "./src-www/js",
+    "lib": ["ESNext", "DOM"],
+    "paths": {
+      "@app/*": ["*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
