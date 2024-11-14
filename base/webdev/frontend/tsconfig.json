@@ -1,10 +1,10 @@
 /**
  * Typescript configuration for Vue / Vite.
  *
- * @author Kimmo Salmela <kimmo.salmela@reun.eu>
+ * @author Reun Media <company@reun.eu>
  * @copyright 2021 Reun Media
  *
- * @see https://gitlab.com/reun/webdev/generator-reun-webapp
+ * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/tsconfig.json
  *
  * @version 2.0.0
  */
