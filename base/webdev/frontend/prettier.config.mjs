@@ -4,7 +4,7 @@
  * @author Reun Media <company@reun.eu>
  * @copyright 2020 Reun Media
  *
- * @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/prettier.config.mjs
+ * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/prettier.config.mjs
  *
  * @version 4.0.0
  */

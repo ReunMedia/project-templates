@@ -4,7 +4,7 @@
  * @author Reun Media <company@reun.eu>
  * @copyright 2020 Reun Media
  *
- * @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/frontend/postcss.config.js
+ * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/postcss.config.js
  *
  * @version 2.1.0
  */
