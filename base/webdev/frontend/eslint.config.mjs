@@ -8,7 +8,7 @@
  *
  * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/eslint.config.mjs
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 import eslint from "@eslint/js";
@@ -19,7 +19,6 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
-  // @ts-expect-error configuration contains deprecated rules
   eslintConfigPrettier,
   {
     rules: {
@@ -29,5 +28,5 @@ export default tseslint.config(
   },
   {
     ignores: ["**/dist/*", "vendor/*"],
-  }
+  },
 );
