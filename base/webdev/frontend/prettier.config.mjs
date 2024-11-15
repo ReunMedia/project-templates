@@ -6,12 +6,13 @@
  *
  * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/prettier.config.mjs
  *
- * @version 4.0.0
+ * @version 4.1.0
  */
 
 export default {
   plugins: [
-    // "./node_modules/prettier-plugin-twig-melody", // Enable if using Twig
     "prettier-plugin-packagejson",
+    // "./node_modules/prettier-plugin-twig-melody", // Enable if using Twig
+    // "prettier-plugin-tailwindcss" // Enable if using Tailwind
   ],
 };
