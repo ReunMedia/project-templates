@@ -8,7 +8,7 @@
  *
  * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/eslint.config.mjs
  *
- * @version 1.1.1
+ * @version 1.2.1
  */
 
 import eslint from "@eslint/js";
@@ -23,7 +23,6 @@ export default tseslint.config(
   {
     rules: {
       "no-console": ["warn", { allow: ["warn", "error"] }],
-      "sort-imports": "warn",
     },
   },
   {
