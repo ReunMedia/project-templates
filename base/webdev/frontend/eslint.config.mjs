@@ -8,12 +8,19 @@
  *
  * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/eslint.config.mjs
  *
- * @version 1.2.1
+ * @version 1.3.0
  */
 
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
+import { fileURLToPath } from "node:url";
+import { includeIgnoreFile } from "@eslint/compat";
+import path from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const gitignorePath = path.resolve(__dirname, ".gitignore");
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -25,7 +32,5 @@ export default tseslint.config(
       "no-console": ["warn", { allow: ["warn", "error"] }],
     },
   },
-  {
-    ignores: ["**/dist/*", "vendor/*"],
-  },
+  includeIgnoreFile(gitignorePath),
 );
