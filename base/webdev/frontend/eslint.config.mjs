@@ -6,9 +6,9 @@
  * @author Reun Media <company@reun.eu>
  * @copyright 2024 Reun Media
  *
- * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/eslint.config.mjs
+ * @see https://github.com/Reun-Media/project-templates
  *
- * @version 1.3.0
+ * @version 1.3.1
  */
 
 import eslint from "@eslint/js";

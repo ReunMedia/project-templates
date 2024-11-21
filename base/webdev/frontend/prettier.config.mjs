@@ -4,9 +4,9 @@
  * @author Reun Media <company@reun.eu>
  * @copyright 2020 Reun Media
  *
- * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/prettier.config.mjs
+ * @see https://github.com/Reun-Media/project-templates
  *
- * @version 4.1.0
+ * @version 4.1.1
  */
 
 export default {

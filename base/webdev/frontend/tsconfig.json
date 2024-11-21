@@ -4,9 +4,9 @@
  * @author Reun Media <company@reun.eu>
  * @copyright 2021 Reun Media
  *
- * @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/frontend/tsconfig.json
+ * @see https://github.com/Reun-Media/project-templates
  *
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 // Most frontend tools (Vue, Vite, Nuxt etc.) come with a built-in TS

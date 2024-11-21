@@ -6,9 +6,9 @@
 # @author Reun Media <company@reun.eu>
 # @copyright 2024 Reun Media
 #
-# @see https://github.com/Reun-Media/project-templates/blob/main/base/webdev/docker/entrypoint.php.sh
+# @see https://github.com/Reun-Media/project-templates
 #
-# @version 1.0.0
+# @version 1.0.1
 #
 
 # Run in /app directory
