@@ -1,4 +1,5 @@
 # My Project
+
 This directory contains files every project should have. Some files
 (e.g. `.gitignore` or `.editorconfig`) are located in individual project type
 directories with more specific customizations.
