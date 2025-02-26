@@ -6,7 +6,7 @@
  *
  * @see https://github.com/Reun-Media/project-templates
  *
- * @version 5.0.0
+ * @version 5.1.0
  */
 
 export default {
@@ -15,4 +15,5 @@ export default {
     // "@zackad/prettier-plugin-twig", // Enable if using Twig
     // "prettier-plugin-tailwindcss" // Enable if using Tailwind
   ],
+  // twigSingleQuote: false, // Enable if using Twig
 };
