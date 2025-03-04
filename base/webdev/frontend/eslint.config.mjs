@@ -8,7 +8,7 @@
  *
  * @see https://github.com/Reun-Media/project-templates
  *
- * @version 1.3.1
+ * @version 1.4.1
  */
 
 import eslint from "@eslint/js";
@@ -30,6 +30,7 @@ export default tseslint.config(
   {
     rules: {
       "no-console": ["warn", { allow: ["warn", "error"] }],
+      "sort-imports": ["warn", { allowSeparatedGroups: true }],
     },
   },
   includeIgnoreFile(gitignorePath),
