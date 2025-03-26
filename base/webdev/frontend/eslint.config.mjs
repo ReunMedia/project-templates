@@ -8,12 +8,13 @@
  *
  * @see https://github.com/Reun-Media/project-templates
  *
- * @version 1.3.1
+ * @version 1.4.0
  */
 
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
+import globals from "globals";
 import { fileURLToPath } from "node:url";
 import { includeIgnoreFile } from "@eslint/compat";
 import path from "node:path";
@@ -31,6 +32,12 @@ export default tseslint.config(
     rules: {
       "no-console": ["warn", { allow: ["warn", "error"] }],
     },
+    languageOptions: {
+      globals: {
+        ...globals.browser, // Use when targeting browser
+        // ...globals['shared-node-browser'] // Use for both Node and browser
+      },
+    },
   },
-  includeIgnoreFile(gitignorePath),
+  includeIgnoreFile(gitignorePath)
 );
