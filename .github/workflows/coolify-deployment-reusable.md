@@ -48,7 +48,7 @@ jobs:
 
   coolify-deployment:
     needs: vars
-    uses: reun-media/project-templates/.github/workflows/coolify-deployment-reusable.yml@[version]
+    uses: ReunMedia/project-templates/.github/workflows/coolify-deployment-reusable.yml@[version]
     with:
       coolify_url: ${{ needs.vars.outputs.coolify_url }}
       coolify_resource_id: ${{ needs.vars.outputs.coolify_resource_id }}
