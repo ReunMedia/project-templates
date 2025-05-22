@@ -8,7 +8,7 @@
  *
  * @see https://github.com/ReunMedia/project-templates
  *
- * @version 1.4.0
+ * @version 1.5.0
  */
 
 import eslint from "@eslint/js";
@@ -24,10 +24,21 @@ const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, ".gitignore");
 
 export default tseslint.config(
+  // ESLint
   eslint.configs.recommended,
+  // typescript-eslint
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
+  // Vue
+  // Enable if using Vue
+  // ...pluginVue.configs["flat/recommended"],
+  // {
+  //   files: ["*.vue", "**/*.vue"],
+  //   languageOptions: { parserOptions: { parser: "@typescript-eslint/parser" } },
+  // },
+  // Prettier
   eslintConfigPrettier,
+  // Custom rules
   {
     rules: {
       "no-console": ["warn", { allow: ["warn", "error"] }],
@@ -39,5 +50,6 @@ export default tseslint.config(
       },
     },
   },
+  // Respect .gitignore
   includeIgnoreFile(gitignorePath)
 );
